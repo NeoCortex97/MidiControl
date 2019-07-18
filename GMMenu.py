@@ -80,20 +80,22 @@ class Controller:
             print("[INFO] Opened Launchpad mk2")
         else:
             print("[ERROR] Cound not find a Launchpad!")
-            return
+            # return
         self.lp.ButtonFlush()
         self.lp.LedAllOn(0)
         print("[INFO] Loading settings . . .")
-        self.data = json.load(open("settings.json", "r", encoding="utf-8"))
+        self.data = json.load(open("settings.json", "r"))
         self.mode = self.data["default_mode"]
         self.music_page = self.data["music"]["default_page"]
         self.music_mode_button = (self.data["music"]["pages"][str(self.music_page)]["button_x"],
-                                    self.data["music"]["pages"][str(self.music_page)]["button_y"],
-                                    self.data["music"]["pages"][str(self.music_page)]["button_color"])
+                                  self.data["music"]["pages"][str(self.music_page)]["button_y"],
+                                  self.data["music"]["pages"][str(self.music_page)]["button_color"])
         self.pages = [[]]
         print("[INFO] Loading music files . . .")
         for item in self.data["music"]["pages"][str(self.music_page)]["songs"]:
-            self.pages[-1].append(Button(self.data["music"]["directory"] + item["file"],item["name"], item["x"], item["y"], item["color"], item["loop"], item["volume"], 1000))
+            self.pages[-1].append(
+                Button(self.data["music"]["directory"] + item["file"], item["name"], item["x"], item["y"],
+                       item["color"], item["loop"], item["volume"], 1000))
 
     def mainlooop(self):
         while self.running:
@@ -104,7 +106,8 @@ class Controller:
                         self.lp.LedCtrlXYByCode(i, 0, 1)
                     for i in range(1, 9):
                         self.lp.LedCtrlXYByCode(8, i, 1)
-                    self.lp.LedCtrlXYByCode(self.music_mode_button[0], self.music_mode_button[1], self.music_mode_button[2])
+                    self.lp.LedCtrlXYByCode(self.music_mode_button[0], self.music_mode_button[1],
+                                            self.music_mode_button[2])
 
                     for item in self.pages[-1]:
                         self.lp.LedCtrlXYByCode(item[0], item[1], item[2])
