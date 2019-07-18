@@ -9,9 +9,9 @@ import pathlib
 
 class Button:
     def __init__(self, path, name, x, y, color, loop, volume, fadetime):
-        if not pygame.get_init():
-            pygame.init()
-            pygame.mixer.init()
+        # if not pygame.get_init():
+        #     pygame.init()
+        #     pygame.mixer.init()
         self.sound = pygame.mixer.Sound(str(pathlib.Path(path).expanduser()))
         self.sound.set_volume(volume)
         self.name = name
@@ -70,19 +70,19 @@ class Button:
 
 class Controller:
     def __init__(self):
-        if not pygame.get_init():
-            pygame.init()
-            pygame.mixer.init()
+        # if not pygame.get_init():
+        #     pygame.init()
+        #     pygame.mixer.init()
         self.running = True
         self.need_redraw = True
-        # self.lp = launchpad.LaunchpadMk2()
-        # if self.lp.Open(0, "mk2"):
-        #     print("[INFO] Opened Launchpad mk2")
-        # else:
-        #     print("[ERROR] Cound not find a Launchpad!")
-        #     # return
-        # self.lp.ButtonFlush()
-        # self.lp.LedAllOn(0)
+        self.lp = launchpad.LaunchpadMk2()
+        if self.lp.Open(0, "mk2"):
+            print("[INFO] Opened Launchpad mk2")
+        else:
+            print("[ERROR] Cound not find a Launchpad!")
+            # return
+        self.lp.ButtonFlush()
+        self.lp.LedAllOn(0)
         print("[INFO] Loading settings . . .")
         self.data = json.load(open("settings.json", "r"))
         self.mode = self.data["default_mode"]
@@ -102,30 +102,32 @@ class Controller:
             if self.need_redraw:
                 if self.mode == "music":
                     pass
-                    # self.lp.LedCtrlXYByCode(4, 0, 17)
-                    # for i in range(5, 8):
-                    #     self.lp.LedCtrlXYByCode(i, 0, 1)
-                    # for i in range(1, 9):
-                    #     self.lp.LedCtrlXYByCode(8, i, 1)
-                    # self.lp.LedCtrlXYByCode(self.music_mode_button[0], self.music_mode_button[1],
-                    #                         self.music_mode_button[2])
-                    #
-                    # for item in self.pages[-1]:
-                    #     self.lp.LedCtrlXYByCode(item[0], item[1], item[2])
+                    self.lp.LedCtrlXYByCode(4, 0, 17)
+                    for i in range(5, 8):
+                        self.lp.LedCtrlXYByCode(i, 0, 1)
+                    for i in range(1, 9):
+                        self.lp.LedCtrlXYByCode(8, i, 1)
+                    self.lp.LedCtrlXYByCode(self.music_mode_button[0], self.music_mode_button[1],
+                                            self.music_mode_button[2])
+
+                    for item in self.pages[-1]:
+                        self.lp.LedCtrlXYByCode(item[0], item[1], item[2])
                 self.need_redraw = False
-            button = [0, 1, 127]
-            # button = self.lp.ButtonStateXY()
+            # button = [0, 1, 127]
+            button = self.lp.ButtonStateXY()
             while button != []:
                 for b in self.pages[-1]:
                     if b == button:
                         b.toggle()
                         break
-                # button = self.lp.ButtonStateXY()
-                time.wait(2000)
-                button = [0, 1, 127]
+                button = self.lp.ButtonStateXY()
+                # time.wait(2000)
+                # button = [0, 1, 127]
 
 
 def main(**kwargs):
+    pygame.init()
+    pygame.mixer.init()
     mod = Controller()
     mod.mainlooop()
 
