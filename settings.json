@@ -1,0 +1,520 @@
+{
+  "default_mode": "music",
+  "players": {
+    "Jaueline": {
+      "character": {
+        "name": "Kinjia",
+        "street_name": "Kij",
+        "Metatype": "dryad",
+        "role": "mage",
+        "gender": "female",
+        "size": 170,
+        "weight": 65,
+        "street_fame": 0,
+        "bad_name": 0,
+        "fame": 0,
+        "karma": 2,
+        "total_karma": 2,
+        "essence": 6.0,
+        "konstitution": 5,
+        "dexerity": 4,
+        "reaction": 2,
+        "strength": 1,
+        "willpower": 5,
+        "logic": 1,
+        "intuition": 2,
+        "charisma": 7,
+        "edge": 6,
+        "magic": 6,
+        "initiative": {
+          "normal": 4,
+          "matrix": 4,
+          "astral": 4
+        },
+        "self_control": 12,
+        "menschenkenntnis": 9,
+        "memory": 6,
+        "lift": 6,
+        "move": 16,
+        "Qualities": [
+          "anatytischer Geist",
+          "Feenglanz",
+          "Katzenhaft",
+          "Magieresistenz",
+          "Nachtsicht",
+          "Pathogen- / Toxinresistenz",
+          "Restlichtverstärkung",
+          "Schutzgeist",
+          "Tierempathie",
+          "Zähigkeit",
+          "Zauberer",
+          "Ehrenkodex",
+          "Händezittern",
+          "Symbiose"
+        ],
+        "mental": 11,
+        "physical": 11,
+        "drain_resistance": "willpower + charisma",
+        "damage_resistance": "kostitution + mod_armor",
+        "skills": [
+          {
+            "name": "Knüppel",
+            "attribute": "dexterity",
+            "level": 5,
+            "type": "combat"
+          },
+          {
+            "name": "Schleichen",
+            "attribute": "dexterity",
+            "level": 3,
+            "type": "body"
+          },
+          {
+            "name": "Wahrnehmung",
+            "attribute": "intuition",
+            "level": 1,
+            "type": "body"
+          },
+          {
+            "name": "Alchemie",
+            "attribute": "magic",
+            "level": 5,
+            "type": "magic"
+          },
+          {
+            "name": "Herbeirufen",
+            "attribute": "magic",
+            "level": 5,
+            "type": "magic"
+          },
+          {
+            "name": "Verbannen",
+            "attribute": "magic",
+            "level": 3,
+            "type": "magic"
+          },
+          {
+            "name": "Tierführung",
+            "attribute": "charisma",
+            "level": 3,
+            "type": "tech"
+          },
+          {
+            "name": "Japanisch",
+            "attribute": "intuition",
+            "level": 2,
+            "type": "lanuage"
+          },
+          {
+            "name": "Englisch",
+            "attribute": "intuition",
+            "level": 2,
+            "type": "language"
+          },
+          {
+            "name": "Deutsch",
+            "attribute": "intuition",
+            "level": 2,
+            "type": "language"
+          },
+          {
+            "name": "Tradition - Shinto",
+            "attribute": "logic",
+            "level": 2,
+            "type": "knowlege"
+          }
+        ],
+        "spells": [
+          {
+            "name": "Betäubungsball",
+            "type": "M",
+            "duration": "S",
+            "reach": "BF",
+            "drain": -3,
+            "category": "combat",
+            "effect": "GRW 286"
+          },
+          {
+            "name": "Eisspeer",
+            "type": "P",
+            "duration": "S",
+            "reach": "BF",
+            "drain": -3,
+            "category": "combat",
+            "effect": "SG 118"
+          },
+          {
+            "name": "Feuerball",
+            "type": "P",
+            "duration": "S",
+            "reach": "BF(F)",
+            "drain": -1,
+            "category": "combat",
+            "effect": "GRW 287"
+          },
+          {
+            "name": "Todeshand",
+            "type": "M",
+            "duration": "S",
+            "reach": "B",
+            "drain": -6,
+            "category": "combat",
+            "effect": "GRW 287"
+          },
+          {
+            "name": "Telepatisches Netz",
+            "type": "M",
+            "duration": "A",
+            "reach": "B",
+            "drain": 0,
+            "category": "wahrnehmung",
+            "effect": "SG 138"
+          },
+          {
+            "name": "Wahrheit Prüfen",
+            "type": "M",
+            "duration": "A",
+            "reach": "B",
+            "drain": -2,
+            "category": "wahrnehmung",
+            "effect": "GRW 294"
+          },
+          {
+            "name": "Heilen",
+            "type": "M",
+            "duration": "P",
+            "reach": "B",
+            "drain": -4,
+            "category": "heilen",
+            "effect": "GRW 2820"
+          },
+          {
+            "name": "Tarnung",
+            "type": "M",
+            "duration": "A",
+            "reach": "BF",
+            "drain": -2,
+            "category": "illusion",
+            "effect": "SG 116"
+          },
+          {
+            "name": "Projektilabwehr",
+            "type": "P",
+            "duration": "A",
+            "reach": "BF",
+            "drain": -1,
+            "category": "maipulation",
+            "effect": "SG 130"
+          },
+          {
+            "name": "Tier Beherrschen",
+            "type": "M",
+            "duration": "A",
+            "reach": "BF",
+            "drain": -3,
+            "category": "maipulation",
+            "effect": "SG 132"
+          }
+        ]
+      }
+    },
+    "Joel": {
+      "character": {
+        "name": "",
+        "street_name": "",
+        "Metatype": "",
+        "role": "",
+        "gender": "",
+        "size": 0,
+        "weight": 0,
+        "street_fame": 0,
+        "bad_name": 0,
+        "fame": 0,
+        "karma": 0,
+        "total_karma": 0,
+        "essence": 0.0,
+        "konstitution": 0,
+        "dexerity": 0,
+        "reaction": 0,
+        "strength": 0,
+        "willpower": 0,
+        "logic": 0,
+        "intuition": 0,
+        "charisma": 0,
+        "edge": 0,
+        "magic": 0,
+        "initiative": {
+          "normal": 0,
+          "matrix": 0,
+          "astral": 0
+        },
+        "self_control": 0,
+        "menschenkenntnis": 0,
+        "memory": 0,
+        "lift": 0,
+        "move": 0,
+        "Qualities": [
+        ],
+        "mental": 0,
+        "physical": 0,
+        "drain_resistance": "",
+        "damage_resistance": "",
+        "skills": [
+
+        ]
+      }
+    },
+    "Nils": {},
+    "Eike": {},
+    "Jonas": {},
+    "Jan": {},
+    "Sylvia": {}
+  },
+  "music": {
+    "directory": "~/Musik/Shadowrun/",
+    "default_page": 1,
+    "pages": {
+      "1": {
+        "button_x": 8,
+        "button_y": 1,
+        "button_color": 17,
+        "songs": [
+          {
+            "name": "1 Shadowrun Main Theme",
+            "file": "wav/1 Shadowrun Main Theme.wav",
+            "x": 0,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "2 Awakening",
+            "file": "wav/2 Awakening.wav",
+            "x": 1,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "3 The Sprawl",
+            "file": "wav/3 The Sprawl.wav",
+            "x": 2,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "4 The Sprawl (loop)",
+            "file": "wav/4 The Sprawl (loop).wav",
+            "x": 2,
+            "y": 2,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "5 Redmond by Night",
+            "file": "wav/5 Redmond by Night.wav",
+            "x": 3,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "6 Redmond by Night (loop)",
+            "file": "wav/6 Redmond by Night (loop).wav",
+            "x": 3,
+            "y": 2,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "7 No Rain Tonight",
+            "file": "wav/7 No Rain Tonight.wav",
+            "x": 4,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "8 No Rain Tonight (loop)",
+            "file": "wav/8 No Rain Tonight (loop).wav",
+            "x": 4,
+            "y": 2,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "9 Drek hits the fan",
+            "file": "wav/9 Drek hits the fan.wav",
+            "x": 5,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "10 Drek hits the fan (loop)",
+            "file": "wav/10 Drek hits the fan (loop).wav",
+            "x": 5,
+            "y": 2,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "11 Relentless Pursuit",
+            "file": "wav/11 Relentless Pursuit.wav",
+            "x": 6,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "12 Relentless Pursuit (loop)",
+            "file": "wav/12 Relentless Pursuit (loop).wav",
+            "x": 6,
+            "y": 2,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "13 When the Shadows are Darkest",
+            "file": "wav/13 When the Shadows are Darkest.wav",
+            "x": 7,
+            "y": 1,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "14 When the Shadows are Darkest (loop)",
+            "file": "wav/14 When the Shadows are Darkest (loop).wav",
+            "x": 7,
+            "y": 2,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "15 Technorc",
+            "file": "wav/15 Technorc.wav",
+            "x": 0,
+            "y": 3,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "16 Technorc (loop)",
+            "file": "wav/16 Technorc (loop).wav",
+            "x": 0,
+            "y": 4,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "17 Technorc (negotiation room)",
+            "file": "wav/17 Technorc (negotiation room).wav",
+            "x": 0,
+            "y": 5,
+            "color": 15,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "18 Technorc (loop, negotiation room)",
+            "file": "wav/18 Technorc (loop, negotiation room).wav",
+            "x": 0,
+            "y": 6,
+            "color": 19,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "19 Lukewarm Soybeer",
+            "file": "wav/19 Lukewarm Soybeer.wav",
+            "x": 1,
+            "y": 3,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "20 Lukewarm Soybeer (loop)",
+            "file": "wav/20 Lukewarm Soybeer (loop).wav",
+            "x": 1,
+            "y": 4,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "21 Lukewarm Soybeer (negotiation room)",
+            "file": "wav/21 Lukewarm Soybeer (negotiation room).wav",
+            "x": 1,
+            "y": 5,
+            "color": 15,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "22 Lukewarm Soybeer (loop, negotiation room)",
+            "file": "wav/22 Lukewarm Soybeer (loop, negotiation room).wav",
+            "x": 1,
+            "y": 6,
+            "color": 19,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "23 Surfing the Grid",
+            "file": "wav/23 Surfing the Grid.wav",
+            "x": 2,
+            "y": 3,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "24 Surfing the Grid (loop)",
+            "file": "wav/24 Surfing the Grid (loop).wav",
+            "x": 2,
+            "y": 4,
+            "color": 11,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "25 Astral Projection (loop and no loop)",
+            "file": "wav/25 Astral Projection (loop and no loop).wav",
+            "x": 3,
+            "y": 3,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          },
+          {
+            "name": "26 Karma (loop and no loop)",
+            "file": "wav/26 Karma (loop and no loop).wav",
+            "x": 4,
+            "y": 3,
+            "color": 7,
+            "volume": 0.5,
+            "loop": true
+          }
+        ]
+      }
+    }
+  }
+}
